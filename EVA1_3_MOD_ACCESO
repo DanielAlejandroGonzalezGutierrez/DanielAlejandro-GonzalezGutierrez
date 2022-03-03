@@ -1,0 +1,52 @@
+paquete eva1_3_mod_acceso;
+
+clase pública EVA1_3_MOD_ACCESO {
+
+    public static void main(String[] args) {
+        Persona por1 = nueva Persona();
+        por1.setID("00112233");
+        per1.setNombre("Rubén");
+        per1.setEdad(40);
+        System.out.println("Nombre: " + per1.getNombre());
+        
+        Persona per2 = nueva Persona();
+        por2.setID("546545");
+        per2.setNombre("Luis");
+        per2.setEdad(19);
+        System.out.println("Nombre: " + per2.getNombre() + ", " + per2.getID());
+    }
+    
+}
+
+Persona de clase {
+//ATRIBUTOS
+    ID de cadena privada;
+    cadena privada nombre;
+    intedad privada;
+//COMPORTAMIENTO
+//PARA LEER Y MODIFICAR LOS ATRIBUTOS, USAMOS METODOS DE LECTURA/ESCRITURA
+    
+// LEER - OBTENER
+    cadena pública getID(){
+    ID de retorno;
+    }
+    public String getNombre(){
+    volver nombre;
+    }
+    public int getEdad(){
+    volver edad;
+    }
+    
+//ASIGNAR - CONFIGURAR
+    public void setID(valor de la cadena){
+    ID = valor;
+    }
+    public void setNombre(String valor){
+    nombre = valor;
+    }
+    public void setEdad(valor int){
+    edad = valor;
+    }
+    
+            
+}
