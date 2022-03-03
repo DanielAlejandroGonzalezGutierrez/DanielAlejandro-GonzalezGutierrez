@@ -1,0 +1,85 @@
+package eva1_5_clase_computadora;
+
+/**
+ *
+ * @author danyb
+ */
+public class EVA1_5_CLASE_COMPUTADORA {
+
+public static void main(String[] args) {
+       
+        computadora pc = new computadora ();
+        pc.setMarca("Dell");
+        pc.setModelo("Inspiron");
+        pc.setAño(2020);
+        pc.setColor("azul");
+        pc.setProc("AMD RYZEN 7");
+        pc.setPrecio(20000.00);
+        System.out.println("Marca: " + pc.getMarca());
+        System.out.println("Modelo: " + pc.getModelo());
+        System.out.println("Año: " + pc.getAño());
+        System.out.println("Procesador: " + pc.getProc());
+        System.out.println("Precio total: " + (pc.getPrecio() + pc.getPrecio() * 0.16));
+        
+    }
+    
+}
+
+class computadora {
+
+    private String marca;
+    private String modelo;
+    private String proc;
+    private int año;
+    private String color;
+    private double precio;
+    
+    
+    //MARCA
+    public void setMarca (String valor){
+        marca = valor;
+    }
+    public String getMarca(){
+        return marca;
+    }
+    
+    //MODELO
+    public void setModelo (String valor){
+        modelo = valor;
+    }
+    public String getModelo(){
+        return modelo;
+    }
+   
+    //PROCESADOR
+    public void setProc (String valor){
+        proc = valor;
+    }
+    public String getProc(){
+        return proc;
+    }
+    
+    //AÑO
+    public void setAño (int valor){
+        año = valor;
+    }
+    public int getAño(){
+        return año;
+    }
+    
+    //COLOR
+    public void setColor (String valor){
+        color = valor;
+    }
+    public String getColor(){
+        return color;
+    }
+    
+    //PRECIO
+    public void setPrecio (double valor){
+        precio = valor;
+    }
+     public double getPrecio(){
+        return precio;
+    }
+}
