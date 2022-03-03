@@ -1,0 +1,83 @@
+package eva1_4_clase_auto;
+
+/**
+ *
+ * @author danyb
+ */
+public class EVA1_4_CLASE_AUTO {
+
+public static void main(String[] args) {
+       
+        automovil carro = new automovil ();
+        carro.setMarca("Ford");
+        carro.setModelo("Mustang");
+        carro.setAño(2022);
+        carro.setColor("rojo");
+        carro.setPrecio(1167000.00);
+        System.out.println("Marca: " + carro.getMarca());
+        System.out.println("Modelo: " + carro.getModelo());
+        System.out.println("Año: " + carro.getAño());
+        System.out.println("Precio: " + carro.getPrecio());
+       
+    }
+    
+}
+
+class automovil {
+
+    private String marca;
+    private String modelo;
+    private String tipo;
+    private int año;
+    private String color;
+    private double precio;
+    
+    
+    //MARCA
+    public void setMarca (String valor){
+        marca = valor;
+    }
+    public String getMarca(){
+        return marca;
+    }
+    
+    //MODELO
+    public void setModelo (String valor){
+        modelo = valor;
+    }
+    public String getModelo(){
+        return modelo;
+    }
+    
+    //TIPO
+    public void setTipo (String valor){
+        tipo = valor;
+    }
+    public String getTipo(){
+        return tipo;
+    }
+    
+    //AÑO
+    public void setAño (int valor){
+        año = valor;
+    }
+    public int getAño(){
+        return año;
+    }
+    
+    //COLOR
+    public void setColor (String valor){
+        color = valor;
+    }
+    public String getColor(){
+        return color;
+    }
+    
+    //PRECIO
+    public void setPrecio (double valor){
+        precio = valor;
+    }
+     public double getPrecio(){
+        return precio;
+    }
+}
