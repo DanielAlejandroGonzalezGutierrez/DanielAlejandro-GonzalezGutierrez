@@ -1,0 +1,29 @@
+package eva1_15_formulas_temp;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author danyb
+ */
+public class EVA1_15_FORMULAS_TEMP {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Teclee la temperatura en centigrados: ");
+        double celcius = input.nextDouble();
+        double farenheit = Conversiones.convCaF(celcius);
+        System.out.println(celcius + "°C = " + farenheit + "°F");
+    }
+    
+}
+
+ class Conversiones{
+ 
+     public static double convCaF(double celcius) {
+      return celcius * 1.8 + 32;
+     }
+ }
