@@ -1,0 +1,33 @@
+package eva1_14_static;
+
+/**
+ *
+ * @author danyb
+ */
+public class EVA1_14_STATIC {
+    
+    public static void main(String[] args){
+    
+        FormulaMatematicas misFor = new FormulaMatematicas();
+        double area = misFor.calcularAreaCirculo(100);
+        System.out.println("Area del circulo " + area);
+        double area2 = FormulaMatematicas.calcularAreaTriangulo(10.0, 10.0);
+        System.out.println("Area del triangulo " + area2);
+        
+    }
+    
+}
+
+class FormulaMatematicas{
+
+    public static double calcularAreaCirculo(double radio){
+    double area;
+    area = 3.1416 * (radio * radio) ;
+    return area;
+    }
+    public static double calcularAreaTriangulo(double base, double altura){
+    double area2 ;
+    area2 = (base * altura)/2;
+    return area2;
+    }
+}
