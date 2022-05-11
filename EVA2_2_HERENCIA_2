@@ -1,0 +1,184 @@
+package eva2_2_herencia_2;
+
+/**
+ *
+ * @author danyb
+ */
+
+public class EVA2_2_HERENCIA_2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Direccion dire = new Direccion("16 de nombiembre", 2206, "Diego Lucero", "31123", "chihuahua", "chihuahua", "6143578029");
+        Estudiante estu1 = new Estudiante("21550339", "Daniel", 19, dire);
+        estu1.imprimirDatos();
+
+    }
+
+ }   
+
+    class Direccion {
+
+        private String Calle;
+        private int numero;
+        private String Colonia;
+        private String Cp;
+        private String Ciudad;
+        private String Estado;
+        private String Telefono;
+
+        public Direccion() {
+            this.Calle = "";
+            this.numero = 0;
+            this.Colonia = "";
+            this.Cp = "";
+            this.Ciudad = "";
+            this.Estado = "";
+            this.Telefono = "";
+        }
+
+        public Direccion(String Calle, int numero, String Colonia, String Cp, String Ciudad, String Estado, String Telefono) {
+            this.Calle = Calle;
+            this.numero = numero;
+            this.Colonia = Colonia;
+            this.Cp = Cp;
+            this.Ciudad = Ciudad;
+            this.Estado = Estado;
+            this.Telefono = Telefono;
+        }
+
+        public String getCalle() {
+            return Calle;
+        }
+
+        public void setCalle(String Calle) {
+            this.Calle = Calle;
+        }
+
+        public int getNumero() {
+            return numero;
+        }
+
+        public void setNumero(int numero) {
+            this.numero = numero;
+        }
+
+        public String getColonia() {
+            return Colonia;
+        }
+
+        public void setColonia(String Colonia) {
+            this.Colonia = Colonia;
+        }
+
+        public String getCp() {
+            return Cp;
+        }
+
+        public void setCp(String Cp) {
+            this.Cp = Cp;
+        }
+
+        public String getCiudad() {
+            return Ciudad;
+        }
+
+        public void setCiudad(String Ciudad) {
+            this.Ciudad = Ciudad;
+        }
+
+        public String getEstado() {
+            return Estado;
+        }
+
+        public void setEstado(String Estado) {
+            this.Estado = Estado;
+        }
+
+        public String getTelefono() {
+            return Telefono;
+        }
+
+        public void setTelefono(String Telefono) {
+            this.Telefono = Telefono;
+        }
+
+        public void imprimirDireccion() {
+            System.out.println(Calle + "Calle " + numero + ", Col." + Colonia
+                    + "\n Cp: " + Cp + ", en " + Ciudad + "," + Estado);
+        }
+    }
+    class Estudiante extends Persona {
+
+        private String numeroControl;
+        private Direccion Direccion;
+
+        public Estudiante() {
+            super();
+            this.numeroControl = "";
+            Direccion = new Direccion();
+        }
+
+        public Estudiante(String numeroControl, String Nombre, int Edad, Direccion Direccion) {
+            super(Nombre, Edad);
+            this.numeroControl = "21550339";
+            this.Direccion = Direccion;
+        }
+
+        public String getNumeroControl() {
+            return numeroControl;
+        }
+
+        public void setNumeroControl(String numeroControl) {
+            this.numeroControl = numeroControl;
+        }
+
+        @Override
+        public void imprimirDatos() {
+            super.imprimirDatos();
+            System.out.println("numero de control: " + numeroControl);
+            super.imprimirDatos();
+            Direccion.imprimirDireccion();
+        }
+
+    }
+
+    class Persona {
+
+        private String Nombre;
+        private int Edad;
+
+        public Persona() {
+            this.Nombre = "";
+            this.Edad = 0;
+        }
+
+        public Persona(String Nombre, int Edad) {
+            this.Nombre = Nombre;
+            this.Edad = Edad;
+        }
+
+        public String getNombre() {
+            return Nombre;
+        }
+
+        public void setNombre(String Nombre) {
+            this.Nombre = Nombre;
+        }
+
+        public int getEdad() {
+            return Edad;
+        }
+
+        public void setEdad(int Edad) {
+            this.Edad = Edad;
+        }
+
+        public void imprimirDatos() {
+            System.out.println("Nombre :" + Nombre);
+            System.out.println("Edad :" + Edad);
+        }
+    
+}
