@@ -1,0 +1,133 @@
+package eva2_16_figuras;
+
+/**
+ *
+ * @author danyb
+ */
+public class EVA2_16_FIGURAS {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Triangulo trian = new Triangulo(10,15);
+        Circulo circulo = new Circulo(20);
+        Rectangulo rect = new Rectangulo(20,25);
+        System.out.println("El area del triangulo es " + trian.calculararea());
+        System.out.println("El area del Circulo es " + circulo.calculararea());
+        System.out.println("El area del rectanculo es " + rect.calculararea());
+        
+         
+    }
+     public static void claseObject(Object o){
+         System.out.println(o.getClass());
+     }
+        
+}
+
+class figura {
+  public double calculararea(){
+  
+    return -1;
+  }
+  
+}
+  class Pruba{
+  }
+  
+public class Circulo extends figura{
+    public double radio;
+
+
+    public Circulo(double radio) {
+        this.radio = radio;
+  
+    }
+
+    public Circulo() {
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    @Override
+    public double calculararea(){
+      return (Math.PI* Math.pow(radio,2));
+    }
+}
+
+public class Rectangulo extends figura {
+    public double base;
+    public double altura;
+
+    public Rectangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public Rectangulo() {
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+    
+    @Override
+     public double calculararea(){
+      return(base*altura);
+    }
+    
+}
+
+public class Triangulo extends figura {
+    public double base;
+    public double altura;
+
+    public Triangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public Triangulo() {
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+    
+    @Override
+    public double calculararea(){
+      return(base*altura)/2;
+    }
+     
+    
+}
