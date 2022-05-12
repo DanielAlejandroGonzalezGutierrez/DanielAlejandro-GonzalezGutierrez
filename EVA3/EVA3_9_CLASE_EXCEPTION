@@ -1,0 +1,38 @@
+package eva3_9_clase_exception;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ *
+ * @author danyb
+ */
+public class EVA3_9_CLASE_EXCEPTION {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Scanner input = new Scanner(System.in);
+        //---------------------------
+        try{
+            
+        System.out.println("Introduce un numero entero");
+        int entero = input.nextInt();
+        System.out.println("Introduce un numero entero");
+        int entero2 = input.nextInt();
+        System.out.println("Division: " + (entero/entero2));
+        }catch(ArithmeticException miVariable){
+          //miVariable.printStackTrace();
+         System.out.println("Se produjo una divicion entre 0");
+        }catch(InputMismatchException e){
+         System.out.println("El valor capturado no es un numero valido");
+        }catch(Exception e){
+        e.printStackTrace();
+        }
+        
+        System.out.println("FIN DEL PROGRAMA");
+    }
+    }
