@@ -1,0 +1,40 @@
+package eva3_18_archivos;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author danyb
+ */
+public class EVA3_18_ARCHIVOS {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //RUTA:
+        //FileInputStream
+       
+        try{
+        FileInputStream archivo = new FileInputStream("c:/REI/AYANAMI.txt");
+             int caracter = archivo.read();
+        while(caracter != -1){
+            System.out.println((char)caracter);
+            caracter = archivo.read();
+        }
+        System.out.println("Leer: " + archivo.read());
+        
+        }catch(FileNotFoundException ex){
+           ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
+    }
+    
+}
